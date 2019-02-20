@@ -33,14 +33,13 @@
       <input id="totalsections" type="number">
     </p>
 
-    <button id="clicker" class="btn btn-primary">Click me!</button>
-    <br>
-
-    <p>Average number of students in all sections are :
-      <input id="avg" type="number">
+    <p id="result">Average number of students in all sections are :
+      <!-- <input id="avg" type="number"> -->
     </p>
 
-    
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <!-- <p id="result"></p> -->
 
   </main>
 
@@ -56,7 +55,7 @@
       const s = document.getElementById('studentsnum').value;
     const t = document.getElementById('totalsections').value;
     const tot = parseInt(s)/parseInt(t);
-    document.getElementById('avg').value = tot;
+    document.getElementById('result').innerHTML = tot;
 
 
 
