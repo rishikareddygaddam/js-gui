@@ -33,8 +33,8 @@
       <input id="totalsections" type="number">
     </p>
 
-    <p>Total number of students in all sections are :
-      <input id="secondNumber" type="number">
+    <p>Average number of students in all sections are :
+      <input id="avg" type="number">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -44,29 +44,24 @@
   </main>
 
   <script>
-    console.log('SCRIPT START')
 
-    console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function totStudent(s,t){
+      return s/t;
+
     }
-    console.log('Defined add=' + add)
+    document.getElementById('clicker').addEventListener('click',function(){
 
-    console.log('Declare event listeners .......................')
+      const s = document.getElementById('studentsnum').value;
+    const t = document.getElementById('totalsections').value;
+    const tot = parseInt(s)/parseInt(t);
+    document.getElementById('avg').value = tot;
 
-    document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
-      console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
-      console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
-      document.getElementById('result').innerHTML = ans
-    })
 
-    console.log('SCRIPT END')
 
+    })   
+
+    
 
     
   </script>
